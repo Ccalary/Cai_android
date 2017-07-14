@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bc_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="2dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_recheck_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="帮忙取个原创的商标名"
+            android:textColor="@color/bc_black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/bc_26_px"
+            android:text="￥25"
+            android:textColor="#FF6600"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="2dp">
+
+        <TextView
+            android:id="@+id/tv_recheck_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2个投稿"
+            android:textColor="@color/message_time_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_recheck_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/bc_26_px"
+            android:text="七天后截稿"
+            android:textColor="@color/orange"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <View style="@style/BC_Separate_Line_Horizontal" />
+
+</LinearLayout>

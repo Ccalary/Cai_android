@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_rounder_white_layout">
+
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:text="更新提示"
+        android:textColor="#282828"
+        android:textSize="16.0sp" />
+
+    <ImageView
+        android:id="@+id/iv_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/tv_title"
+        android:background="@color/background_for_all"
+        android:contentDescription="@string/app_name" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/iv_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_line"
+            android:layout_margin="16.0dip"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="#282828"
+            android:textSize="17.0sp" />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/llv_maketel"
+        android:layout_width="match_parent"
+        android:layout_height="45.0dip"
+        android:layout_below="@+id/scrollView"
+        android:layout_marginLeft="16.0dip"
+        android:layout_marginRight="16.0dip"
+        android:layout_marginTop="16.0dip"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/layout_cancle"
+            android:layout_width="0dip"
+            android:layout_height="40.0dip"
+            android:layout_marginRight="16.0dip"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="下次再说"
+                android:textColor="#282828" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/background_for_all"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_sure"
+            android:layout_width="0dip"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="16.0dip"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="立即更新"
+                android:textColor="@color/main_color" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignTop="@+id/llv_maketel"
+        android:background="@color/background_for_all"/>
+
+
+</RelativeLayout>

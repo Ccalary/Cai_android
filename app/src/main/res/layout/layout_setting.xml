@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.bc.caibiao.view.TopBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bgColor="@color/toolbar_color"
+        app:textTitle="设置"
+        app:textTitleColor="@color/bc_white" />
+
+    <RelativeLayout
+        android:id="@+id/rl_myinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/bc_white"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="个人资料" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/icon_jinru" />
+    </RelativeLayout>
+
+    <View
+        style="@style/BC_Separate_Line_Horizontal"
+        android:layout_marginLeft="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_change_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bc_white"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="修改密码" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/icon_jinru" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_help"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bc_white"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="帮助" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/icon_jinru" />
+    </RelativeLayout>
+
+    <View
+        style="@style/BC_Separate_Line_Horizontal"
+        android:layout_marginLeft="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_waiter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bc_white"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="联系客服" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/icon_jinru" />
+    </RelativeLayout>
+
+    <View
+        style="@style/BC_Separate_Line_Horizontal"
+        android:layout_marginLeft="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bc_white"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="联系我们" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/icon_jinru" />
+    </RelativeLayout>
+
+    <View
+        style="@style/BC_Separate_Line_Horizontal"
+        android:layout_marginLeft="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bc_white"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="关于我们" />
+
+        <TextView
+            android:id="@+id/tvNameRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/icon_jinru" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_logout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/shape_solid_orange"
+        android:gravity="center"
+        android:text="退出当前账号"
+        android:textColor="@color/bc_white"
+        android:textSize="15sp" />
+
+</LinearLayout>

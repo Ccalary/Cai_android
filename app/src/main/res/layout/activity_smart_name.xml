@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_smart_name"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bc_common_bg_grey"
+    android:orientation="vertical">
+
+    <com.bc.caibiao.view.TopBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bgColor="@color/toolbar_color"
+        app:textTitle="智能取名"
+        app:textTitleColor="@color/bc_white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bc_36_px"
+        android:background="@color/bc_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/bc_26_px"
+            android:layout_marginTop="@dimen/bc_26_px"
+            android:text="行业取名"
+            android:textColor="#00b115"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/bc_26_px"
+            android:layout_marginLeft="@dimen/bc_26_px"
+            android:layout_marginRight="@dimen/bc_26_px"
+            android:layout_marginTop="@dimen/bc_26_px"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/llIndustry"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/shape_smart_name_bg"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/ll_industry"
+                android:paddingLeft="@dimen/bc_16_px"
+                android:paddingRight="@dimen/bc_16_px"
+                android:layout_marginRight="12dp">
+
+                <TextView
+                    android:id="@+id/tvIndustry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:hint="请选择行业"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/icon_xiala" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_industry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_solid_green"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/bc_16_px"
+                android:paddingRight="@dimen/bc_16_px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="按行业起名"
+                    android:textColor="@color/bc_white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bc_36_px"
+        android:background="@color/bc_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/bc_26_px"
+            android:layout_marginTop="@dimen/bc_26_px"
+            android:text="关键字"
+            android:textColor="@color/orange"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/bc_26_px"
+            android:layout_marginLeft="@dimen/bc_26_px"
+            android:layout_marginRight="@dimen/bc_26_px"
+            android:layout_marginTop="@dimen/bc_26_px"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/shape_smart_name_bg"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/ll_key"
+                android:layout_marginRight="12dp"
+                android:paddingLeft="@dimen/bc_16_px"
+                android:paddingRight="@dimen/bc_16_px">
+
+                <EditText
+                    android:id="@+id/tv_key"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@android:color/transparent"
+                    android:dropDownVerticalOffset="10.0dip"
+                    android:dropDownWidth="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip"
+                    android:singleLine="true"
+                    android:hint="输入关键字"
+                    android:textCursorDrawable="@null"
+                    android:textSize="15.0sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_solid_orange"
+                android:paddingBottom="10dp"
+                android:layout_centerVertical="true"
+                android:paddingTop="10dp"
+                android:paddingLeft="@dimen/bc_16_px"
+                android:paddingRight="@dimen/bc_16_px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关键字起名"
+                    android:textColor="@color/bc_white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

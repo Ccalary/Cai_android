@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_for_all">
+
+    <com.bc.caibiao.view.TopBarLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bgColor="@color/toolbar_color"
+        app:textRightSize="10sp"
+        app:textTitle="查询中心"
+        app:textTitleColor="@color/bc_white" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_below="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tip_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:lineSpacingExtra="1.2dp"
+            android:textColor="@color/base_gray"
+            android:layout_centerVertical="true"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/title_rlv"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/rl_title"
+        android:background="@color/bc_white"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="商标名称："
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/base_gray"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etTaskTitle"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@+id/tv_title"
+            android:layout_height="match_parent"
+            android:layout_marginRight="12dp"
+            android:background="@null"
+            android:textColor="@color/base_gray"
+            android:textColorHint="@color/base_gray_al"
+            android:gravity="center_vertical"
+            android:hint="请输入商标名称"
+            android:maxLength="20"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/background_for_all"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_below="@+id/title_rlv"
+        android:layout_width="match_parent"
+        android:background="@color/bc_white"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tv_search_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="复查费用："
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/base_gray"
+            android:layout_centerVertical="true"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:textColor="@color/orange"
+            android:layout_centerVertical="true"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/background_for_all"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/desc_rlv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bc_white"
+        android:layout_below="@+id/rl_search"
+        android:paddingTop="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="13dp"
+            android:text="付款方式："
+            android:textColor="@color/base_gray"
+            android:textSize="14sp" />
+
+        <RadioGroup
+            android:id="@+id/pay_type_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp">
+            <RadioButton
+                android:id="@+id/wx_pay"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@drawable/selector_weixin"
+                android:text="微信"
+                android:textSize="15sp"
+                android:textColor="@color/bc_black"
+                android:button="@null"
+                android:layout_marginRight="106dp"
+                android:gravity="center_horizontal"
+                android:paddingTop="40dp"/>
+            <RadioButton
+                android:id="@+id/zfb_pay"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@drawable/selector_zhifubao"
+                android:text="支付宝"
+                android:textSize="15sp"
+                android:textColor="@color/bc_black"
+                android:button="@null"
+                android:gravity="center_horizontal"
+                android:paddingTop="40dp"/>
+
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_below="@+id/pay_type_group"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvPublish"
+        style="@style/Commit_TextView_Style"
+        android:layout_below="@+id/desc_rlv"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="30dp"
+        android:text="提交复查"
+        android:textSize="16sp" />
+
+</RelativeLayout>

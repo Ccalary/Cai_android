@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pic_bg">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/pic_logo"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/logo"
+        android:background="@drawable/pic_biaoy"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="375dp"
+        android:layout_height="170dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/search_pic_bg02">
+
+        <TextView
+            android:id="@+id/layout_top"
+            android:layout_width="375dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="4dp"
+            android:text="文字图形检索"
+            android:textColor="@color/bc_white"
+            android:textSize="20sp"
+            android:gravity="center"
+            />
+
+        <RelativeLayout
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_below="@id/layout_top"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_search_icon_search">
+
+            <EditText
+                android:id="@+id/etBrandName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="50dp"
+                android:background="@null"
+                android:textColor="@color/base_gray"
+                android:textColorHint="@color/base_gray_al"
+                android:hint="输入商品名字。例如：玄博"
+                android:padding="5dp"
+                android:textSize="15sp"
+                android:singleLine="true"/>
+
+
+            <RelativeLayout
+                android:id="@+id/search_view"
+                android:layout_width="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:textColor="#ffffff"
+                    android:text="查询"
+                    android:textSize="16sp"
+                    android:layout_centerInParent="true"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlv_img"
+                android:layout_width="55dp"
+                android:layout_toLeftOf="@+id/search_view"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/search_pic_xiangji"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="商标分类"
+            android:textSize="16sp"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/search_icon_fenlei"
+            android:textColor="@color/bc_white"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

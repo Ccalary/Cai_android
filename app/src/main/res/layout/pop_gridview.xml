@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/popwindow_layout"
+    android:background="#f5f5f5"
+    android:orientation="vertical" >
+
+    <com.bc.caibiao.view.TopBarLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bgColor="@color/toolbar_color"
+        app:textTitle="行业分类"
+        app:textTitleColor="@color/bc_white" />
+
+
+
+<GridView
+        android:id="@+id/pop_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:divider="@null"
+        style="@style/ListView_style"
+        android:numColumns="3"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:columnWidth="90dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:choiceMode="multipleChoice"
+        android:layout_below="@+id/title_layout"
+        android:layout_above="@+id/bottom"
+        android:layout_marginBottom="10dp"
+    android:padding="10dp"
+    android:background="@color/bc_white"
+    />
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:background="@drawable/shape_btn_cancel_bg"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            />
+        <TextView
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确认"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/shape_btn_ok_bg"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            />
+    </LinearLayout>
+</RelativeLayout>

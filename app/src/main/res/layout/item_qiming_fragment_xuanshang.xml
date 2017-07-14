@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal"
+    android:background="#ffffff">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pic_morentouxiang" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_toRightOf="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/base_gray"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="50dp"
+        android:textSize="15sp"
+        android:singleLine="true"
+        tools:text="帮忙取名" />
+
+    <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/base_gray"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginTop="8dp"
+        android:layout_alignLeft="@+id/tvTitle"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvEndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:textColor="@color/base_gray_al"
+        android:textSize="15sp"
+        android:layout_alignTop="@+id/tvLabel"
+        android:layout_toRightOf="@+id/tvLabel"
+        tools:text="7天后截至" />
+
+    <TextView
+        android:id="@+id/tvMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/orange"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background_for_all"/>
+
+</RelativeLayout>

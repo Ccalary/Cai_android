@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="horizontal">
+
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivLogo"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/pic_morentouxiang"
+            app:roundAsCircle="true" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/ivLogo"
+            android:textColor="@color/base_gray"
+            android:textSize="16sp"
+            tools:text="帮忙取名" />
+
+        <TextView
+            android:id="@+id/tvLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvTitle"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/base_gray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvEndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvLabel"
+            android:textColor="@color/toolbar_color"
+            android:layout_centerHorizontal="true"
+            android:textSize="15sp"
+            tools:text="7天后截至" />
+
+
+
+        <LinearLayout
+            android:id="@+id/recheck_zcsb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_stroke_zcsb"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="12dp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:visibility="gone"
+            android:paddingTop="3dp">
+
+            <TextView
+                android:id="@+id/task_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="注册商标"
+                android:textColor="@color/zcsb_color" />
+
+        </LinearLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/background_for_all" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:id="@+id/bottom_layout"
+        android:background="@color/bc_white">
+
+
+        <TextView
+            android:id="@+id/tv_name_true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/base_gray"
+            android:textSize="14sp"
+             />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/background_for_all"
+            android:layout_below="@+id/tv_name_true"/>
+
+        <TextView
+            android:id="@+id/tv_desc_true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="6dp"
+            android:textColor="@color/base_gray"
+            android:textSize="14sp"
+            tools:text="释义：" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/background_for_all"
+        android:layout_below="@+id/bottom_layout"
+        android:layout_height="15dp"/>
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp">
+
+    <RelativeLayout
+        android:id="@+id/dashi1"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_shangbiao_et_bg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img1"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:textColor="@color/base_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/desc1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name1"
+                android:layout_marginBottom="20dp"
+                android:maxLines="3"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp" />
+
+            <TextView
+                android:id="@+id/sign_count1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="12dp"
+                android:drawablePadding="3dp"
+                android:drawableLeft="@drawable/pic_yuan_yellow"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/base_gray_al"
+                android:textSize="14sp" />
+            
+            <View
+                android:layout_below="@+id/sign_count1"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

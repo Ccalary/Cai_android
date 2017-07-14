@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ededf0">
+
+    <com.bc.caibiao.view.TopBarLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bgColor="@color/toolbar_color"
+        app:textTitle="检查结果"
+        app:textTitleColor="@color/bc_white" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlv_tab"
+        android:layout_below="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            layout="@layout/view_horistal_section"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlv_result_count"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#ffffff"
+        android:layout_below="@+id/rlv_tab">
+
+        <TextView
+            android:id="@+id/tv_result_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/bc_22_px"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/signBorrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:textSize="16sp"
+            android:text="注册商标"
+            android:textColor="@color/toolbar_color"/>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#ededf0"/>
+
+    </RelativeLayout>
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ptrFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlv_result_count"
+        android:layout_marginBottom="65dp"
+        cube_ptr:ptr_duration_to_close="200"
+        cube_ptr:ptr_duration_to_close_header="1000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="1.7">
+
+        <GridView
+            android:id="@+id/gvSuggestion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadingEdge="none"
+            android:focusable="false"
+            android:horizontalSpacing="0.7dp"
+            android:numColumns="2"
+            android:scrollbars="vertical"
+            android:verticalSpacing="20dp" />
+
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#ff9c00"
+            android:gravity="center_vertical"
+            android:paddingLeft="40dp"
+            android:text="搜不到想要的？不如来逛逛商城"
+            android:textColor="@color/bc_white"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/ivMall"
+            android:layout_width="77dp"
+            android:layout_height="77dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="11.5dp"
+            android:layout_marginRight="11.5dp"
+            android:src="@drawable/icon_gouwuche" />
+    </RelativeLayout>
+</RelativeLayout>

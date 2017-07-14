@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_marster_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bc_white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pic_bg_new"/>
+
+    <TextView
+        android:id="@+id/line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="170dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/bc_white"
+        android:text="一秒知天下"/>
+
+    <TextView
+        android:id="@+id/line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@+id/line1"
+        android:layout_marginTop="6dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/bc_white"
+        android:text="三分钟轻松注册"/>
+
+    <ImageView
+        android:id="@+id/ivLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/icon_fanhui02" />
+
+    <ImageView
+        android:id="@+id/ivRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/icon_share_default" />
+
+    <ImageView
+        android:id="@+id/ivCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/pic_erweima" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/ivCode"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/toolbar_color" />
+
+    <TextView
+        android:id="@+id/tap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_below="@+id/userName"
+        android:layout_marginTop="6dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/toolbar_color"
+        android:text="只选才标商标起名"/>
+
+
+</RelativeLayout>

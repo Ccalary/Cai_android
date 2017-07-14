@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ededf0"
+    android:orientation="vertical">
+
+    <com.bc.caibiao.view.TopBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bgColor="@color/toolbar_color"
+        app:leftShow="true"
+        app:textTitle="任务广场"
+        android:id="@+id/id_tablayout"
+        app:textTitleColor="@color/bc_white" />
+
+    <RelativeLayout
+        android:id="@+id/rlv_tab"
+        android:layout_below="@+id/id_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            layout="@layout/view_horistal_section"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/container_relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlv_tab"
+        android:layout_marginBottom="50dp">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlv_push_task"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我要发布任务"
+            android:textColor="@color/orange"
+            android:textSize="16sp"
+            android:layout_centerInParent="true"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/background_for_all"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/empty_img"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@drawable/pic_meiyougengduo"/>
+
+
+</RelativeLayout>

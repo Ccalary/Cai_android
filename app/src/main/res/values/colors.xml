@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="windowBackground">@color/bc_white</color>
+
+    <color name="bc_black_2">#4b4b4b</color>
+    <color name="tv_blue">#2285ff</color>
+    <color name="bc_login_line">#b2b2b2</color>
+
+    <color name="bc_white">#ffffff</color>
+    <color name="color_ffffff">#ffffff</color>
+    <color name="bc_common_bg_grey">#eeeeee</color>
+    <color name="bc_black">#333333</color>
+    <color name="bc_dark_grey">#9c9c9c</color>
+    <color name="bc_red">#e54650</color>
+    <color name="grey_line">#cccccc</color>
+    <color name="search_text_grey">#999999</color>
+    <color name="bc_grey">#666666</color>
+    <color name="light_green">#00cc99</color>
+    <color name="orange">#FF6600</color>
+    <color name="forget_title">#5c5c5c</color>
+    <color name="reg_yellow">#ffb739</color>
+    <color name="toolbar_color">#2196ff</color>
+    <color name="qiming_blue">#7476ff</color>
+
+    <color name="main_color">#0090ff</color>
+    <color name="base_gray">#7b7b81</color>
+    <color name="base_gray_al">#887b7b81</color>
+    <color name="color_ededf0">#ededf0</color>
+    <color name="background_for_all">#ededf0</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="cancel_collect">#ff9900</color>
+    <color name="message_time_color">#c7c7cd</color>
+    <color name="zcsb_color">#2196ff</color>
+    <color name="color_e67e63">#e67e63</color>
+    <color name="color_529ce7">#529ce7</color>
+    <color name="color_f1b461">#f1b461</color>
+    <color name="color_15b98b">#15b98b</color>
+    <color name="color_8f6fe9">#8f6fe9</color>
+    <color name="color_a0a0a0">#a0a0a0</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_030303">#030303</color>
+
+    <color name="color_a4a4a4">#a4a4a4</color>
+</resources>

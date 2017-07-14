@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.bc.caibiao.view.TopBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bgColor="@color/toolbar_color"
+        app:textTitle="修改密码"
+        app:textTitleColor="@color/bc_white" />
+
+    <LinearLayout
+        android:background="@color/bc_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="14dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_forget_pwd_input_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新密码"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:textColor="#636363"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/new_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="78dp"
+                android:textColorHint="#d2d2d2"
+                android:hint="@string/register_pwd"
+                android:textSize="14sp"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+                android:background="@null"
+                android:digits="@string/digits_pwd"
+                android:inputType="textPassword" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_forget_pwd_input_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="重复密码"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:textColor="#636363"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/reply_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="78dp"
+                android:textColorHint="#d2d2d2"
+                android:layout_centerVertical="true"
+                android:hint="@string/register_sure_pwd"
+                android:textSize="14sp"
+                android:background="@null"
+                android:singleLine="true"
+                android:digits="@string/digits_pwd"
+                android:inputType="textPassword" />
+
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_solid_orange"
+            android:text="确认"
+            android:gravity="center"
+            android:textColor="@color/bc_white"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>

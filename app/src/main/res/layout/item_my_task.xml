@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="horizontal"
+    android:background="#ffffff">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/base_gray"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_8f6fe9"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/tvTitle"
+        android:background="@drawable/bg_tag_8f6fe9"
+        android:padding="3dp"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_sing_cnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/orange"
+        android:layout_marginLeft="12dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12dp"
+        android:layout_toRightOf="@+id/tvLabel"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tvEndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/base_gray_al"
+        android:textSize="15sp"
+        android:layout_marginRight="12dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tvLabel"
+        tools:text="7天后截至" />
+
+    <TextView
+        android:id="@+id/tvMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:layout_marginRight="12dp"
+        android:textColor="@color/orange"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background_for_all"/>
+
+</RelativeLayout>

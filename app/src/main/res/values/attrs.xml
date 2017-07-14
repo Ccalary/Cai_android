@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TopBar">
+        <attr name="textTitle" format="string" />
+        <attr name="textLeft" format="string" />
+        <attr name="textRight" format="string" />
+        <attr name="textRightColor" format="reference" />
+        <attr name="textTitleColor" format="reference" />
+        <attr name="bgColor" format="reference" />
+        <attr name="imageLeft" format="reference" />
+        <attr name="imageRight" format="reference" />
+        <attr name="leftShow" format="boolean" />
+        <attr name="rightShow" format="boolean" />
+        <attr name="textRightSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CommonET">
+        <attr name="digits" format="string" />
+        <attr name="hint" format="string" />
+        <attr name="image" format="reference" />
+        <attr name="maxLength" format="integer" />
+        <attr name="inputType">
+            <enum name="textPassword" value="0x00000080" />
+            <enum name="phone" value="0x00000003" />
+            <enum name="number" value="0x00000002" />
+            <enum name="numberDecimal" value="0x00002000" />
+        </attr>
+    </declare-styleable>
+</resources>

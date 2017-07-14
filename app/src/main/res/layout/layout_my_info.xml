@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.bc.caibiao.view.TopBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bgColor="@color/toolbar_color"
+        app:textTitle="个人资料"
+        app:textTitleColor="@color/bc_white" />
+
+    <RelativeLayout
+        android:id="@+id/change_touxiang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/bc_white"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="头像" />
+
+        <TextView
+            android:id="@+id/tvTxRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/icon_jinru" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/user_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tvTxRight"
+            android:src="@drawable/icon_dingdan"
+            app:roundAsCircle="true"
+            app:placeholderImage="@drawable/pic_touxiang_myorder"
+            app:placeholderImageScaleType="fitCenter"
+            app:failureImage="@drawable/pic_touxiang_myorder"
+            app:failureImageScaleType="centerInside"
+            />
+    </RelativeLayout>
+
+    <View
+        style="@style/BC_Separate_Line_Horizontal"
+        android:layout_marginLeft="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/change_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bc_white"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="名字" />
+
+        <TextView
+            android:id="@+id/tvNameRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/icon_jinru" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tvNameRight"
+            android:text="赵子龙" />
+    </RelativeLayout>
+
+</LinearLayout>

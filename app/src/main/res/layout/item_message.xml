@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bc_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_message_content"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:text="帮忙取个原创的商标名"
+        android:textColor="@color/bc_grey"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_createtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:text="￥25"
+        android:textColor="@color/message_time_color"
+        android:textSize="14sp" />
+
+    <View style="@style/BC_Separate_Line_Horizontal" />
+
+</LinearLayout>

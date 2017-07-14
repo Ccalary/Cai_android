@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/fl_forum_account_list_item_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5.0dip"
+        android:ellipsize="marquee"
+        android:lineSpacingExtra="0sp"
+        android:padding="12.0dip"
+        android:singleLine="true"
+        android:textColor="#9b9b9b"
+        android:textSize="16.0sp" />
+
+    <ImageView
+        android:id="@+id/iv_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10.0dip"
+        android:contentDescription="@string/app_name"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/iv_top_devider"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dip"
+        android:layout_marginLeft="10.0dip"
+        android:background="@color/background_for_all"/>
+
+
+    <View
+        android:id="@+id/iv_bottom_devider"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dip"
+        android:layout_below="@+id/fl_forum_account_list_item_tv"
+        android:background="@color/background_for_all"/>
+
+
+</RelativeLayout>

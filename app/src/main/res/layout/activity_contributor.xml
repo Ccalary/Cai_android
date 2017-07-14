@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bc="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.bc.caibiao.view.TopBarLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        bc:textTitle="任务投稿" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvSubmit"
+        android:layout_below="@+id/topBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="5dp"
+                android:background="@color/bc_white"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="投稿名称："
+                        android:textColor="@color/bc_grey"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/etBrandName"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请输入商标名称"
+                        android:paddingLeft="10dp"
+                        android:textColorHint="@color/bc_black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View style="@style/BC_Separate_Line_Horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="是否查询："
+                        android:textColor="@color/bc_grey"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvNotQuery"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/icon_yes"
+                        android:drawablePadding="6dp"
+                        android:text="未查询"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvQuery"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/icon_yes"
+                        android:drawablePadding="6dp"
+                        android:text="已查询"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View style="@style/BC_Separate_Line_Horizontal" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/etInterpretation"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:background="@null"
+                        android:gravity="top"
+                        android:hint="释义说明"
+                        android:maxLength="200"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/bc_black"
+                        android:textColorHint="@color/bc_grey"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvWordNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/etInterpretation"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="0/200"
+                        android:textColor="@color/bc_grey"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="前往"
+                    android:textColor="@color/bc_grey"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvQueryCenter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="查询中心"
+                    android:textColor="@color/orange"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="看看能否注册"
+                    android:textColor="@color/bc_grey"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/tvSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/orange"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="提交"
+        android:textColor="@color/bc_white"
+        android:textSize="16sp" />
+</RelativeLayout>

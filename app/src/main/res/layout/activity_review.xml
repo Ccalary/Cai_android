@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_review"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bc_common_bg_grey"
+    >
+    <com.bc.caibiao.view.TopBarLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:textTitle="查询"
+        app:bgColor="@color/toolbar_color"
+        app:textTitleColor="@color/bc_white"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="人工复查费6元，并出具检索报告，8点至17点，1小时内出具检索报告"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/bc_white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="商标名称"
+
+                />
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="龙腾"/>
+        </LinearLayout>
+
+        <View style="@style/BC_Separate_Line_Horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="复查费用"
+
+                    />
+                <TextView
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥6.00"
+                    android:textColor="@color/orange"
+                    android:textSize="16sp"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+        <View style="@style/BC_Separate_Line_Horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="付款方式"
+
+                />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:orientation="horizontal"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp">
+            <RadioButton
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@drawable/selector_weixin"
+                android:checked="true"
+                android:text="微信"
+                android:textSize="15sp"
+                android:textColor="@color/bc_black"
+                android:button="@null"
+                android:layout_marginRight="106dp"
+                android:gravity="center_horizontal"
+                android:paddingTop="40dp"/>
+            <RadioButton
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@drawable/selector_zhifubao"
+                android:text="支付宝"
+                android:textSize="15sp"
+                android:textColor="@color/bc_black"
+                android:button="@null"
+                android:gravity="center_horizontal"
+                android:paddingTop="40dp"/>
+
+        </RadioGroup>
+
+
+
+        <View style="@style/BC_Separate_Line_Horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <TextView
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/shape_fucha_sub_bg"
+                android:gravity="center"
+                android:text="提交复查"
+                android:textColor="@color/bc_white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

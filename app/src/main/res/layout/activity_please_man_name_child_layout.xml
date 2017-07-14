@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bc_white"
+    android:orientation="vertical">
+
+    <com.bc.caibiao.view.TopBarLayout
+        android:id="@+id/id_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bgColor="@color/toolbar_color"
+        app:leftShow="false"
+        app:textTitleColor="@color/bc_white"/>
+
+    <com.bc.caibiao.widget.MyScrollView
+        android:id="@+id/scrollview"
+        android:layout_below="@+id/id_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/id_tablayout">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/iv_Marster_Pic"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="10dp"
+                    app:roundAsCircle="true"/>
+
+                <TextView
+                    android:id="@+id/please_man_name_child_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/iv_Marster_Pic"
+                    android:textColor="@color/bc_black"
+                    android:textSize="16sp"/>
+
+                <LinearLayout
+                    android:id="@+id/tedian_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/please_man_name_child_name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/iv_Marster_Pic"
+                    android:background="@color/bc_white"
+                    android:orientation="vertical"/>
+            </RelativeLayout>
+
+            <include
+                layout="@layout/view_public_top_layout"/>
+
+            <!--老板名字-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:id="@+id/text1"
+                    style="@style/please_text"
+                    android:text="老板名字"/>
+
+                <EditText
+                    android:id="@+id/please_man_name_child_boss_name"
+                    style="@style/please_edit"
+                    android:hint="请输入老板名字"/>
+
+                <View
+                    style="@style/BC_Separate_Line_Horizontal"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <!--字数-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:id="@+id/text2"
+                    style="@style/please_text"
+                    android:text="字数："/>
+
+                <EditText
+                    android:id="@+id/please_man_name_child_number"
+                    style="@style/please_edit"
+                    android:hint="请输入理想字数"/>
+
+                <View
+                    style="@style/BC_Separate_Line_Horizontal"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <!--生日-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:id="@+id/text3"
+                    style="@style/please_text"
+                    android:text="生日："/>
+
+                <TextView
+                    android:id="@+id/please_man_name_child_birthday"
+                    style="@style/please_tv_right"
+                    android:text="请选择"/>
+
+                <View
+                    style="@style/BC_Separate_Line_Horizontal"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <!--出生时刻-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:id="@+id/text4"
+                    style="@style/please_text"
+                    android:text="出生时刻"/>
+
+                <TextView
+                    android:id="@+id/please_man_name_child_birth_time"
+                    style="@style/please_tv_right"
+                    android:text="请选择"/>
+
+                <View
+                    style="@style/BC_Separate_Line_Horizontal"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <!--输入文字-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="128dp">
+
+                <!--要求标齐-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp">
+
+                    <EditText
+                        android:id="@+id/etDemand"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:background="@null"
+                        android:gravity="top"
+                        android:hint="您还可以描述具体需求，写的越清晰，投稿越多"
+                        android:maxLength="200"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/base_gray"
+                        android:textColorHint="@color/base_gray_al"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvWordNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/etDemand"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="0/200"
+                        android:textColor="@color/base_gray_al"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+
+                <View
+                    style="@style/BC_Separate_Line_Horizontal"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <!--套餐选择-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="套餐选择："
+                android:textColor="@color/bc_black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--//MyListView-->
+                <com.bc.caibiao.view.MyListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"/>
+
+            </LinearLayout>
+
+            <!--付款方式-->
+            <TextView
+                android:id="@+id/paytype_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="付款方式："
+                android:textColor="@color/bc_black"/>
+
+            <RadioGroup
+                android:id="@+id/pay_type_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp">
+                <RadioButton
+                    android:id="@+id/wx_pay"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:background="@drawable/selector_weixin"
+                    android:text="微信"
+                    android:textSize="15sp"
+                    android:textColor="@color/bc_black"
+                    android:button="@null"
+                    android:layout_marginRight="106dp"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="40dp"/>
+                <RadioButton
+                    android:id="@+id/zfb_pay"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:background="@drawable/selector_zhifubao"
+                    android:text="支付宝"
+                    android:textSize="15sp"
+                    android:textColor="@color/bc_black"
+                    android:button="@null"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="40dp"/>
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/publich"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_solid_orange"
+                android:text="提交"
+                android:textColor="@color/bc_white"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+    </com.bc.caibiao.widget.MyScrollView>
+
+
+    <ImageView
+        android:id="@+id/icon_kefu"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/pic_kefu"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="28dp"/>
+</RelativeLayout>

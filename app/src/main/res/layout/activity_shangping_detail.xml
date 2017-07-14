@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_for_all"
+    android:orientation="vertical">
+
+    <com.bc.caibiao.view.TopBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bgColor="@color/toolbar_color"
+        app:textTitle="商品详情"
+        app:textTitleColor="@color/bc_white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.bc.caibiao.widget.MyScrollView
+            android:id="@+id/content_scrollview"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tvSubmit"
+            android:layout_marginBottom="50dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlv_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:background="@color/bc_white">
+
+                    <ImageView
+                        android:id="@+id/sdvPic"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_centerInParent="true" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/background_for_all"
+                        android:layout_alignParentBottom="true"/>
+
+                </RelativeLayout>
+
+                
+                <RelativeLayout
+                    android:id="@+id/rlv_moreinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/rlv_img"
+                    android:background="@color/bc_white">
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/base_gray"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvName"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/orange"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+                
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:background="@color/bc_white"
+                    android:layout_below="@+id/rlv_moreinfo"
+                    android:layout_marginTop="12dp"
+                    android:layout_height="match_parent">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rlv_desc_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="15dp"
+                            android:layout_centerVertical="true"
+                            android:background="#ff7420"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="商品描述:"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/base_gray"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <WebView
+                        android:id="@+id/wvDetial"
+                        android:layout_below="@+id/rlv_desc_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </com.bc.caibiao.widget.MyScrollView>
+
+
+        <RelativeLayout
+            android:id="@+id/rlv_submit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/orange">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="立即购买"
+                android:textColor="@color/bc_white"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

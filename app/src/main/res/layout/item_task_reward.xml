@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/bc_white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="帮忙取个原创的商标名"
+            android:textColor="@color/bc_black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥25"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/bc_26_px"
+            android:textSize="18sp"
+            android:textColor="#FF6600"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_gravity="center_vertical">
+        <TextView
+
+            android:id="@+id/tv_qiming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="商标起名"
+            android:background="@drawable/shape_stroke_blue"
+            android:textColor="@color/qiming_blue"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_marginLeft="@dimen/bc_24_px"
+            android:layout_toRightOf="@+id/tv_qiming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/orange"
+            android:text="2个投稿"/>
+
+        <TextView
+            android:id="@+id/tv7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="七天后截稿"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/bc_26_px"
+            android:textSize="18sp"
+            android:textColor="@color/light_green"
+            android:layout_gravity="center_vertical"/>
+
+
+
+
+
+    </RelativeLayout>
+
+    <View style="@style/BC_Separate_Line_Horizontal" />
+
+</LinearLayout>

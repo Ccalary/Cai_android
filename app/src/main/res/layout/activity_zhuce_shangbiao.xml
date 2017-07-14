@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:orientation="vertical">
+
+    <com.bc.caibiao.view.TopBarLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bgColor="@color/toolbar_color"
+        app:textTitle="注册商标"
+        app:textTitleColor="@color/bc_white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bc_white"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="商标名称"
+                android:textColor="@color/bc_black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="请输入您需要注册的商标名称(必填)"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View style="@style/BC_Separate_Line_Horizontal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="产品"
+                android:textColor="@color/bc_black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etProduct"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="请输入您需要注册的产品"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View style="@style/BC_Separate_Line_Horizontal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="联系人"
+                android:textColor="@color/bc_black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etUserName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="请输入您的姓名(必填)"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View style="@style/BC_Separate_Line_Horizontal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="联系电话"
+                android:textColor="@color/bc_black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etTelphone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="请输入您的电话(必填)"
+                android:paddingLeft="10dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View style="@style/BC_Separate_Line_Horizontal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/yingye_zhizhao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="营业执照："
+                android:textColor="@color/bc_black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/zhuce_shangchuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/yingye_zhizhao"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/icon_zhuce_shangchuan" />
+        </RelativeLayout>
+
+        <View style="@style/BC_Separate_Line_Horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+
+        <TextView
+            android:id="@+id/apply_zc"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_stroke_btn"
+            android:gravity="center"
+            android:text="申请注册"
+            android:textColor="@color/bc_white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/recheck"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_stroke_btn"
+            android:gravity="center"
+            android:text="复查"
+            android:textColor="@color/bc_white"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_for_all"
+    android:orientation="vertical">
+
+    <com.bc.caibiao.view.TopBarLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bgColor="@color/toolbar_color"
+        app:textTitle="商品详情"
+        app:textTitleColor="@color/bc_white" />
+
+
+    <RelativeLayout
+        android:layout_below="@+id/tablayout"
+        android:id="@+id/baseinfo_layout"
+        android:background="@color/bc_white"
+        android:layout_width="match_parent"
+        android:layout_height="170dp">
+
+        <RelativeLayout
+            android:id="@+id/rlv_headerpic"
+            android:layout_width="150dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_stroke_grey"
+            android:layout_height="150dp">
+
+            <ImageView
+                android:id="@+id/sdvPic"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:scaleType="fitXY"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_toRightOf="@+id/rlv_headerpic"
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orange"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/cnt_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_below="@+id/tvPrice"
+                android:textColor="@color/base_gray"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/background_for_all"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlv_count_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bc_white"
+        android:layout_below="@+id/baseinfo_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:text="购买数量："
+            android:layout_centerVertical="true"
+            android:textColor="@color/base_gray"
+            android:textSize="14sp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/shape_stroke_grey2">
+
+            <TextView
+                android:id="@+id/tvDec"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/bc_grey"
+                android:textSize="18sp" />
+
+            <View style="@style/BC_Separate_Line_Vertical"></View>
+
+            <TextView
+                android:id="@+id/tvNum"
+                android:layout_width="34dp"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/bc_black"
+                android:textSize="14sp" />
+
+            <View style="@style/BC_Separate_Line_Vertical"></View>
+
+            <TextView
+                android:id="@+id/tvInc"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="@color/bc_grey"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/background_for_all"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rlv_address_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bc_white"
+        android:layout_below="@+id/rlv_count_layout"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:text="付款位置："
+            android:layout_centerVertical="true"
+            android:textColor="@color/base_gray"
+            android:textSize="14sp" />
+        <EditText
+            android:id="@+id/et_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/base_gray"
+            android:textSize="14sp"
+            android:background="@null"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlv_paytitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bc_white"
+        android:layout_below="@+id/rlv_address_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:text="支付方式："
+            android:layout_centerVertical="true"
+            android:textColor="@color/base_gray"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/bc_white"
+        android:layout_below="@+id/rlv_paytitle">
+
+        <RadioGroup
+            android:id="@+id/pay_type_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/wx_pay"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@drawable/selector_weixin"
+                android:text="微信"
+                android:textSize="15sp"
+                android:textColor="@color/bc_black"
+                android:button="@null"
+                android:layout_marginRight="106dp"
+                android:gravity="center_horizontal"
+                android:paddingTop="40dp"/>
+            <RadioButton
+                android:id="@+id/zfb_pay"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@drawable/selector_zhifubao"
+                android:text="支付宝"
+                android:textSize="15sp"
+                android:textColor="@color/bc_black"
+                android:button="@null"
+                android:gravity="center_horizontal"
+                android:paddingTop="40dp"/>
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlv_submit"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@color/orange"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="立即购买"
+            android:textColor="@color/bc_white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</RelativeLayout>

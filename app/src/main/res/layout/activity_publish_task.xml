@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bc="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bc_white"
+    android:orientation="vertical">
+
+    <!--标题-->
+    <com.bc.caibiao.view.TopBarLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        bc:textTitle="发布任务"
+        bc:textTitleColor="@color/bc_white"
+        bc:textRightColor="@color/bc_white"
+        bc:bgColor="@color/toolbar_color"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--第一行 类型-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="类型："
+                    android:textColor="@color/base_gray"
+                    android:layout_centerVertical="true"
+                    android:textSize="14sp" />
+
+                <RadioGroup
+                    android:id="@+id/type_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/tvBrandGetName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/tvCompanyGetName"
+                        android:button="@null"
+                        android:textColor="@color/base_gray"
+                        android:drawableLeft="@drawable/selector_xuanze"
+                        android:drawablePadding="3dp"
+                        android:checked="true"
+                        android:text="商标起名"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/tvCompanyGetName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:button="@null"
+                        android:textColor="@color/base_gray"
+                        android:drawableLeft="@drawable/selector_xuanze"
+                        android:drawablePadding="2dp"
+                        android:text="公司起名"
+                        android:textSize="14sp" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <View style="@style/BC_Separate_Line_Horizontal" />
+
+            <!--标题-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="标题："
+                    android:textColor="@color/base_gray"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etTaskTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:textColor="@color/base_gray"
+                    android:textColorHint="@color/base_gray_al"
+                    android:gravity="center_vertical"
+                    android:hint="不超过20个字"
+                    android:maxLength="20"
+                    android:paddingLeft="10dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View style="@style/BC_Separate_Line_Horizontal" />
+
+            <!--分类-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:id="@+id/llCompanyGetName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="行业"
+                        android:textColor="@color/base_gray"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvIndustry"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:drawablePadding="2dp"
+                        android:drawableRight="@drawable/icon_xiala"
+                        android:gravity="center_vertical|right"
+                        android:text="请选择"
+                        android:textColor="@color/bc_grey"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llBrandGetName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分类"
+                        android:textColor="@color/base_gray"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvCategory"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2"
+                        android:drawablePadding="2dp"
+                        android:drawableRight="@drawable/icon_xiala"
+                        android:gravity="center_vertical|right"
+                        android:text="请选择"
+                        android:textColor="@color/bc_grey"
+                        android:textSize="14sp" />
+
+                    <View style="@style/BC_Separate_Line_Vertical" />
+
+                    <TextView
+                        android:id="@+id/tvCategoryQuery"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="分类查询"
+                        android:textColor="@color/orange"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <View style="@style/BC_Separate_Line_Horizontal" />
+
+            <!--要求-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="要求"
+                    android:textColor="@color/base_gray"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/llv_taglayout_recommand"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="12dp"
+                    android:layout_below="@+id/rlv_recommend_tag_title"
+                    android:layout_height="wrap_content">
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/BC_Separate_Line_Horizontal" />
+
+            <!--要求标齐-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp">
+
+                <EditText
+                    android:id="@+id/etDemand"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="您还可以描述具体需求，写的越清晰，投稿越多"
+                    android:maxLength="200"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/base_gray"
+                    android:textColorHint="@color/base_gray_al"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvWordNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/etDemand"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="0/200"
+                    android:textColor="@color/base_gray_al"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View style="@style/BC_Separate_Line_Horizontal" />
+
+            <!--截稿周期-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="截稿周期"
+                    android:textColor="@color/base_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvEndTime"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="2dp"
+                    android:drawableRight="@drawable/icon_xiala"
+                    android:gravity="center_vertical|right"
+                    android:text="--天"
+                    android:textColor="@color/orange"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <View style="@style/BC_Separate_Line_Horizontal" />
+
+            <!--悬赏金额-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="悬赏金额"
+                    android:textColor="@color/bc_grey"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvReward"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="2dp"
+                    android:drawableRight="@drawable/icon_xiala"
+                    android:gravity="center_vertical|right"
+                    android:text="--元"
+                    android:textColor="@color/orange"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <View style="@style/BC_Separate_Line_Horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="12dp"
+                android:text="提示：如无人投稿，赏金将退款，如果有人投稿但你未采纳稿件，赏金将被所有投稿人平分。"
+                android:textColor="#1ad023"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="12dp"
+                android:text="付款方式"
+                android:textColor="@color/base_gray"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/pay_type_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp">
+                <RadioButton
+                    android:id="@+id/wx_pay"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:background="@drawable/selector_weixin"
+                    android:text="微信"
+                    android:textSize="15sp"
+                    android:textColor="@color/bc_black"
+                    android:button="@null"
+                    android:layout_marginRight="106dp"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="40dp"/>
+                <RadioButton
+                    android:id="@+id/zfb_pay"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:background="@drawable/selector_zhifubao"
+                    android:text="支付宝"
+                    android:textSize="15sp"
+                    android:textColor="@color/bc_black"
+                    android:button="@null"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="40dp"/>
+
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/tvPublish"
+                style="@style/Commit_TextView_Style"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/publish"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <ImageView
+        android:id="@+id/icon_kefu"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/pic_kefu"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="28dp"/>
+
+</RelativeLayout>

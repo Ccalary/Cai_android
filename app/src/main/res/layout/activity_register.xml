@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bc="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="37dp"
+    android:paddingRight="37dp">
+
+    <ImageView
+        android:layout_width="64.8dp"
+        android:layout_height="76.4dp"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/icon_logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="15.6dp"
+            android:layout_height="19.2dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_shoujihaoma" />
+
+
+        <EditText
+            android:id="@+id/etMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:background="@null"
+            android:hint="@string/login_input_mobile"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:textColor="@color/bc_black_2"
+            android:textColorHint="#cfcfcf"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/bc_login_line"></View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16.4dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_yanzhengma" />
+
+
+        <EditText
+            android:id="@+id/etCheckCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="39.6dp"
+            android:layout_toLeftOf="@+id/btnCheckCode"
+            android:background="@null"
+            android:hint="@string/register_check_code"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/bc_black_2"
+            android:textColorHint="#cfcfcf"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/btnCheckCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_reg_send_code_bg"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="2dp"
+            android:text="@string/send_check_code"
+            android:textColor="#cfcfcf"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/bc_login_line"></View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="14.4dp"
+            android:layout_height="17.6dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_mima" />
+
+
+        <EditText
+            android:id="@+id/textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="39.6dp"
+            android:background="@null"
+            android:hint="@string/register_pwd"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/bc_black_2"
+            android:textColorHint="#cfcfcf"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/bc_login_line"></View>
+
+    <TextView
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/shape_reg_submit_bg"
+        android:gravity="center"
+        android:text="立即注册"
+        android:textColor="@color/bc_white"
+        android:textSize="16sp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="28dp"
+            android:gravity="center_vertical">
+
+            <CheckBox
+                android:id="@+id/cbAgreement"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/selector_xieyi"
+                android:button="@null"
+                android:checked="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/register_agree"
+                android:textColor="@color/bc_black_2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvRegisterAgreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_agreement"
+                android:textColor="@color/tv_blue"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.bc.caibiao.view.TopBarLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bgColor="@color/qiming_blue"
+        app:textRightSize="10sp"
+        app:textTitle="起名"
+        app:textTitleColor="@color/bc_white"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="释义名称："
+            android:textColor="@color/bc_black"
+            android:textSize="14sp" />
+        <com.bc.caibiao.view.ClearEditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:hint="请输入商标名称"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/search_text_grey"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="释义说明："
+            android:layout_gravity="top"
+            android:textColor="@color/bc_black"
+            android:textSize="14sp" />
+        <EditText
+            android:id="@+id/etInterpretation"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:hint="释义说明"
+            android:gravity="top"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/search_text_grey"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <View style="@style/BC_Separate_Line_Horizontal" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="释义说明："
+        android:layout_gravity="top"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/bc_black"
+        android:textSize="14sp" />
+
+    <com.bc.caibiao.view.MyGridView
+        android:id="@+id/gvInterpretation"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="4"
+        android:verticalSpacing="10dp" />
+    <TextView
+        android:id="@+id/tvSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_solid_orange"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/bc_white"
+        android:textSize="16sp" />
+</LinearLayout>

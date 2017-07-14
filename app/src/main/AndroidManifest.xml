@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bc.caibiao">
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="com.xiaomi.market.sdk.UPDATE" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- ShareSdk Start -->
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+
+    <!-- jpush -->
+    <permission
+        android:name="${applicationId}.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+
+    <!-- jpush  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="${applicationId}.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+
+    <application
+        android:name=".base.BaseApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.MainActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppBaseTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity
+            android:name=".view.CropImageActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.ResetPasswordActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.CommonWebActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.ForgetPasswordActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.BindPhoneActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.RegisterActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.bc.caibiao.ui.qiming.MasterDescAct"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.bc.caibiao.adapter.QiMingModule.DoSignAct"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.bc.caibiao.ui.me.DoSignInfoAct"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.bc.caibiao.ui.me.MasterTaskDetailAct"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.bc.caibiao.ui.qiming.BigTeacherListAct"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.bc.caibiao.ui.qiming.SearchServiceAct"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.bc.caibiao.ui.me.ShareAct"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent"/>
+
+        <activity android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SplashActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="com.bc.caibiao.ui.GuideAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.start"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+
+
+        <activity
+            android:name=".ui.me.PeopleAuthActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.AddNewPeopleAuthActivity"
+            android:theme="@style/SecondeActTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.qiming.TaskListActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.bc.caibiao.ui.qiming.CategoryChildAct"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.bc.caibiao.ui.qiming.CategoryChildActDetail"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.bc.caibiao.ui.qiming.CategorySearchResult"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".ui.qiming.TaskDetailActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"/>
+
+
+        <activity android:name=".ui.qiming.ContributorActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.bc.caibiao.ui.qiming.SendPostAct"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.bc.caibiao.ui.qiming.CategoryListAct"
+            android:theme="@style/SecondeActTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.qiming.PublishTaskActivity"
+            android:theme="@style/SecondeActTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.bc.caibiao.ui.qiming.SimpleOutLinkAct"
+            android:theme="@style/SecondeActTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.bc.caibiao.ui.qiming.PleaseManNameChildActivity"
+            android:theme="@style/SecondeActTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.me.RewardActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.qiming.MarsterActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.qiming.ReviewActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.qiming.MarsterDetailActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.me.MyContributeActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.me.MyMasterTaskActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".ui.qiming.PublishDashiTaskActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SecondeActTheme"/>
+        <activity
+            android:name=".ui.me.DashiTaskDetailActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.DashiQimingEditActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.DashiOfMeTaskDetailActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.shangbiao.ShangbiaoSearchActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.shangbiao.PicSearchActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.shangbiao.WordSearchActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.shangbiao.ShangbiaoClassificationActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.shangbiao.ShangpingDetailActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.shangbiao.ShangpingBuyActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.shangbiao.ShangbiaoSaleActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.qiming.SmartNameActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.qiming.SmartLsitActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.me.ImMasterActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.shangbiao.ResultActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.shangbiao.ClassicActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.me.ZhuCeShangBiaoActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.me.WalletActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.me.WalletWithdrawalsActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.me.WithdrawalsRecordActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.me.MyOrderActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".ui.me.CollectTradeMarkActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".ui.me.MessageActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".ui.me.MyInfoActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".ui.me.SettingActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".ui.me.AboutUsActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".ui.me.WaiterActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".ui.me.ChangePwdActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".ui.me.BrandRecheckActivity"
+            android:theme="@style/SecondeActTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".ui.me.RecheckDetailActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".ui.me.OrderDetailActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".ui.me.ResetUsernameActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".ui.me.WebViewActivity"
+            android:theme="@style/SecondeActTheme"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".ui.me.MemberAuthActivity"
+            android:theme="@android:style/Theme.Translucent"
+            android:screenOrientation="portrait"></activity>
+
+
+
+        <activity android:name=".ui.shangbiao.ShangbiaoDetailActivity"></activity>
+
+
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!--集成line客户端登录授权，需要添如下格式的过滤器-->
+            <intent-filter>
+                <data android:scheme="line.1477692153" />
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <!--微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+
+
+        <!-- ==============jpush============== -->
+        <!-- Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能-->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+
+        <!-- Required SDK 核心功能-->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:process=":mult">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
+                <category android:name="${applicationId}" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能-->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" android:exported="false"/>
+
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
+        <meta-data android:name="JPUSH_APPKEY" android:value="6eccb7f7f2dfe17c91ac9fd5" /> <!--  </>值来自开发者平台取得的AppKey-->
+
+
+
+
+        <!-- User defined.  For test only  用户自定义的广播接收器-->
+        <receiver
+            android:name=".jpush.MyReceiver"
+            android:exported="false"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+        <!-- ==============jpush============== -->
+    </application>
+
+</manifest>

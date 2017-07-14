@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bc="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bc_white"
+    android:orientation="vertical">
+
+    <com.bc.caibiao.view.TopBarLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        bc:bgColor="@color/qiming_blue"
+        bc:textRight="提交"
+        bc:textRightColor="@color/bc_white"
+        bc:textTitle="发布任务"
+        bc:textTitleColor="@color/bc_white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:layout_width="69dp"
+                    android:layout_height="69dp"
+                    android:src="@drawable/pic_moren" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="章国兴"
+                        android:textColor="@color/bc_grey"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/shape_stroke_orange1"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="2dp"
+                            android:text="易经"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_stroke_orange1"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="2dp"
+                            android:text="古典文学"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="类型"
+                    android:textColor="@color/bc_grey"
+                    android:textSize="14sp" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/tvBrandGetName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/tvCompanyGetName"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/selector_xuanze"
+                        android:drawablePadding="3dp"
+                        android:checked="true"
+                        android:text="商标起名"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/tvCompanyGetName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/selector_xuanze"
+                        android:drawablePadding="2dp"
+                        android:text="公司起名"
+                        android:textSize="14sp" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <View style="@style/BC_Separate_Line_Horizontal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="标题"
+                    android:textColor="@color/bc_grey"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etTaskTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="60dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="不超过20个字"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View style="@style/BC_Separate_Line_Horizontal" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:id="@+id/llCompanyGetName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="行业"
+                        android:textColor="@color/bc_grey"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvIndustry"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:drawablePadding="2dp"
+                        android:drawableRight="@drawable/icon_xiala"
+                        android:gravity="center_vertical|right"
+                        android:text="请选择"
+                        android:textColor="@color/bc_grey"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llBrandGetName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分类"
+                        android:textColor="@color/bc_grey"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvCategory"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2"
+                        android:drawablePadding="2dp"
+                        android:drawableRight="@drawable/icon_xiala"
+                        android:gravity="center_vertical|right"
+                        android:text="请选择"
+                        android:textColor="@color/bc_grey"
+                        android:textSize="14sp" />
+
+                    <View style="@style/BC_Separate_Line_Vertical" />
+
+                    <TextView
+                        android:id="@+id/tvCategoryQuery"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="分类查询"
+                        android:textColor="@color/orange"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <View style="@style/BC_Separate_Line_Horizontal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="老板名字"
+                    android:textColor="@color/bc_grey"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etBossName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="60dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入老板名字"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View style="@style/BC_Separate_Line_Horizontal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="字数"
+                    android:textColor="@color/bc_grey"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/etNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="60dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入理想数字"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View style="@style/BC_Separate_Line_Horizontal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="生日"
+                    android:textColor="@color/bc_grey"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvBirthDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="60dp"
+                    android:drawablePadding="2dp"
+                    android:drawableRight="@drawable/icon_xiala"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:text="请选择"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View style="@style/BC_Separate_Line_Horizontal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="出生时刻"
+                    android:textColor="@color/bc_grey"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvBirthTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="60dp"
+                    android:drawablePadding="2dp"
+                    android:drawableRight="@drawable/icon_xiala"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:text="请选择"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View style="@style/BC_Separate_Line_Horizontal" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                >
+
+                <EditText
+                    android:id="@+id/etDemand"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="您还可以描述具体需求，写的越清晰，投稿越多"
+                    android:maxLength="200"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/bc_black"
+                    android:textColorHint="@color/bc_grey"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvWordNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/etDemand"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="0/200"
+                    android:textColor="@color/bc_grey"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="套餐选择"
+                    android:textColor="@color/bc_grey"
+                    android:textSize="14sp" />
+
+                <com.bc.caibiao.view.MyListView
+                    android:id="@+id/lvTaocan"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:dividerHeight="20dp"
+                    android:divider="@android:color/transparent"
+                    android:listSelector="@android:color/transparent" />
+            </LinearLayout>
+
+            <View style="@style/BC_Separate_Line_Horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="12dp"
+                android:text="付款方式"
+                android:textColor="@color/bc_grey"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp">
+
+                <RadioButton
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginRight="106dp"
+                    android:background="@drawable/selector_weixin"
+                    android:button="@null"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="40dp"
+                    android:text="微信"
+                    android:textColor="@color/bc_black"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:background="@drawable/selector_zhifubao"
+                    android:button="@null"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="40dp"
+                    android:text="支付宝"
+                    android:textColor="@color/bc_black"
+                    android:textSize="15sp" />
+
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/tvPublish"
+                style="@style/Commit_TextView_Style"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="30dp"
+                android:text="提交"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

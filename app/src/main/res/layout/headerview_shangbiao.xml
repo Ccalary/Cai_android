@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/topbanner"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="3"
+        android:background="@color/bc_white" >
+
+        <LinearLayout
+            android:id="@+id/llChaxun"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/icon_goumainew" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="商标购买"
+                android:textColor="@color/bc_black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View
+            style="@style/QingMing_Separate_Line_Vertical"
+            ></View>
+
+        <LinearLayout
+            android:id="@+id/llFenlei"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/icon_fenleinew" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="商标分类"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/bc_black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View
+            style="@style/QingMing_Separate_Line_Vertical"
+            ></View>
+
+        <LinearLayout
+            android:id="@+id/llChushou"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/icon_chushounew" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="商标出售"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/bc_black"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_below="@+id/topbanner"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bc_white"
+    android:orientation="vertical">
+
+    <com.bc.caibiao.view.TopBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bgColor="@color/toolbar_color"
+        app:leftShow="true"
+        app:textTitle="投稿"
+        android:id="@+id/id_tablayout"
+        app:textTitleColor="@color/bc_white" />
+
+
+    <com.bc.caibiao.widget.MyScrollView
+        android:id="@+id/scrollview"
+        android:layout_below="@+id/id_tablayout"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bc_white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/headview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/title_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="标题："
+                        android:textColor="@color/base_gray"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/etTaskTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:textColor="@color/base_gray"
+                        android:textColorHint="@color/base_gray_al"
+                        android:gravity="center_vertical"
+                        android:hint="不超过20个字"
+                        android:maxLength="20"
+                        android:paddingLeft="10dp"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/edit_ll"
+                    android:layout_below="@+id/title_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="释义："
+                        android:textColor="@color/base_gray"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_margin="12dp"
+                        android:background="@drawable/shape_edit_sign_bg"
+                        android:layout_height="100dp">
+
+                        <EditText
+                            android:id="@+id/etDemand"
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:background="@null"
+                            android:gravity="top"
+                            android:hint="请输入释义详情"
+                            android:maxLength="200"
+                            android:padding="8dp"
+                            android:textColor="@color/base_gray"
+                            android:textColorHint="@color/base_gray_al"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="45dp"
+                    android:background="@color/background_for_all"/>
+
+
+                <TextView
+                    android:text="选择释义图片"
+                    android:layout_marginLeft="12dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/base_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_ll"/>
+
+            </RelativeLayout>
+
+
+            <com.bc.caibiao.widget.MNoScrollGridView
+                android:id="@+id/grid_user_center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:fadingEdge="none"
+                android:layout_below="@+id/headview"
+                android:horizontalSpacing="2dip"
+                android:listSelector="@color/transparent"
+                android:numColumns="4"
+                android:scrollbars="none"
+                android:layout_margin="8dp"
+                android:background="@color/bc_white"
+                android:verticalSpacing="2dip"/>
+
+        </RelativeLayout>
+
+
+    </com.bc.caibiao.widget.MyScrollView>
+
+
+    <!--dibu-->
+    <RelativeLayout
+        android:id="@+id/ll_qiming"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/orange"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提交"
+            android:layout_centerInParent="true"
+            android:textColor="@color/bc_white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

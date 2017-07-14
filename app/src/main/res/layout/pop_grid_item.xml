@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bc.caibiao.widget.ChoiceView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:lineSpacingExtra="0sp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/pop_grid_item_text_color"
+        android:textSize="16.0sp"
+        android:text="lsdkfj"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_pop_grid_item_bg"
+        />
+</com.bc.caibiao.widget.ChoiceView>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/bc_white"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View style="@style/BC_Separate_Line_Horizontal" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivPic"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:scaleType="centerInside"
+            fresco:placeholderImage="@drawable/pic_result_a" />
+
+        <View
+            style="@style/BC_Separate_Line_Horizontal"
+            android:layout_marginTop="12dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="11406405哥弟尔森"
+                android:singleLine="true"
+                android:textColor="@color/bc_black"
+                android:textSize="15sp" />
+
+
+           <RelativeLayout
+               android:layout_below="@+id/tvName"
+               android:layout_width="match_parent"
+               android:layout_marginLeft="8dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/tvDesc"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginRight="30dp"
+                   android:singleLine="true"
+                   android:layout_centerVertical="true"
+                   android:text="fdsfdsafdsfasdf"
+                   android:textColor="@color/bc_dark_grey"
+                   android:textSize="14sp" />
+
+
+               <RelativeLayout
+                   android:id="@+id/rlv_follow"
+                   android:layout_width="40dp"
+                   android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"
+                   android:layout_height="40dp">
+
+                   <ImageView
+                       android:id="@+id/is_follow"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_centerInParent="true"/>
+
+               </RelativeLayout>
+
+           </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View style="@style/BC_Separate_Line_Horizontal" />
+    </LinearLayout>
+
+    <View style="@style/BC_Separate_Line_Vertical" />
+
+
+</LinearLayout>

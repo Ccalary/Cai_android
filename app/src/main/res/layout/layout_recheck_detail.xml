@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.bc.caibiao.view.TopBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bgColor="@color/toolbar_color"
+        app:textTitle="复查详情"
+        app:textTitleColor="@color/bc_white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/bc_white"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/sbmc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="商标名称 : "
+            android:textColor="@color/bc_grey" />
+
+        <TextView
+            android:id="@+id/recheck_markname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/sbmc"
+            android:text="赵子龙"
+            android:textColor="@color/bc_black" />
+
+        <LinearLayout
+            android:id="@+id/recheck_zcsb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_stroke_zcsb"
+            android:paddingBottom="3dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="注册商标"
+                android:textColor="@color/zcsb_color" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View style="@style/BC_Separate_Line_Horizontal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bc_white"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/fcy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="复查员 : "
+            android:textColor="@color/bc_grey" />
+
+        <TextView
+            android:id="@+id/recheck_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="35dp"
+            android:layout_toRightOf="@id/fcy"
+            android:text="赵子龙"
+            android:textColor="@color/bc_black" />
+
+    </RelativeLayout>
+
+    <View style="@style/BC_Separate_Line_Horizontal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bc_white"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/jsbg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="检索报告"
+            android:textColor="@color/bc_grey" />
+
+        <TextView
+            android:id="@+id/recheck_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jsbg"
+            android:layout_marginTop="10dp"
+            android:text="赵子龙手机发送咖啡就是浪费"
+            android:textColor="@color/bc_black" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bc_white"
+        android:padding="10dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/rechek_market_icon"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:placeholderImage="@drawable/pic_muban_b"
+            app:placeholderImageScaleType="fitCenter" />
+    </RelativeLayout>
+</LinearLayout>

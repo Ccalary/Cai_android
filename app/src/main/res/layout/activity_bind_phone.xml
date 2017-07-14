@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bc="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bc_white"
+    android:orientation="vertical">
+
+    <com.bc.caibiao.view.TopBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        bc:imageLeft="@drawable/icon_fanhui01"
+        bc:textTitle="手机号注册"
+        bc:textTitleColor="@color/forget_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <EditText
+            android:id="@+id/etMobile"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/shape_forget_pwd_input_bg"
+            android:hint="@string/register_mobile"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:paddingLeft="15dp"
+            android:textColorHint="#d2d2d2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etCheckCode"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_forget_pwd_input_bg"
+                android:hint="@string/register_check_code"
+                android:inputType="number"
+                android:maxLength="6"
+                android:paddingLeft="15dp"
+                android:textColorHint="#d2d2d2" />
+
+            <TextView
+                android:id="@+id/btnCheckCode"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/shape_forget_pwd_input_bg"
+                android:gravity="center"
+                android:text="@string/send_check_code"
+                android:textColor="#636363"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnToBind"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="16dp"
+            android:background="#d2d2d2"
+            android:text="@string/common_next"
+            android:textColor="@color/bc_white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

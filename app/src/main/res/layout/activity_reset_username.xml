@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.bc.caibiao.view.TopBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bgColor="@color/toolbar_color"
+        app:textTitle="修改名字"
+        app:textRight="完成"
+        app:textRightColor="@color/bc_white"
+        app:textTitleColor="@color/bc_white" />
+
+    <LinearLayout
+        android:background="@color/bc_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="14dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_forget_pwd_input_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="名字"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:textColor="#636363"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/new_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="78dp"
+                android:textColorHint="#d2d2d2"
+                android:hint="@string/register_username"
+                android:textSize="14sp"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+                android:background="@null" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f0f0f0">
+
+    <com.bc.caibiao.view.TopBarLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bgColor="@color/toolbar_color"
+        app:textTitle="提现"
+        app:textRight="提现记录"
+        app:textTitleColor="@color/bc_white"
+        app:textRightColor="@color/bc_white"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+      >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="可提现余额"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/bc_black"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tv_accountBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥ 3000.00"
+            android:textColor="@color/orange"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提现限额每次¥ 500元，目前仅支持提现支付宝账户"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/bc_grey"
+        android:textSize="14sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bc_white"
+        android:paddingLeft="10dp"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="提现金额"
+            android:textColor="@color/bc_black"
+            android:textSize="14sp" />
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:hint="请输入提现金额"
+            android:id="@+id/tvMoney"
+            android:background="@color/bc_white"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/bc_black"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View style="@style/BC_Separate_Line_Horizontal" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:paddingRight="10dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="支付宝账号"
+            android:textColor="@color/bc_black"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etZhifubao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="60dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:hint="请输入您本人名下的支付宝账号"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View style="@style/BC_Separate_Line_Horizontal" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="真实姓名"
+            android:textColor="@color/bc_black"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="60dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:hint="请输入您绑定支付宝的真实姓名"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textSize="14sp" />
+    </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/shape_solid_orange"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/bc_white"
+        android:textSize="15sp" />
+</LinearLayout>

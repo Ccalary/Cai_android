@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.bc.caibiao.widget.ConvenientBanner.ConvenientBanner
+        android:id="@+id/convenientBanner"
+        android:layout_width="match_parent"
+        android:layout_height="210dp" />
+
+    <RelativeLayout
+        android:id="@+id/rlv_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/convenientBanner">
+
+        <include
+            android:id="@+id/rlv_qiming_type"
+            layout="@layout/qiming_header_type_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/rlv_type"
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_marginTop="4dp"
+        android:layout_height="400dp">
+
+        <RelativeLayout
+            android:id="@+id/rlv_title1"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <View
+                android:layout_width="6dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:background="#ff6464"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/base_gray"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:textSize="15sp"
+                android:text="大师推荐"/>
+
+            <TextView
+                android:id="@+id/tv_seemore_teacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/base_gray_al"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:textSize="14sp"
+                android:text="查看更多>"/>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_height="310dp">
+
+            <com.bc.caibiao.view.OnePageGallery
+                android:id="@+id/gallery1"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlv_title2"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <View
+                android:layout_width="6dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:background="#ffa70e"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/base_gray"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:textSize="15sp"
+                android:text="悬赏起名"/>
+
+            <TextView
+                android:id="@+id/see_more_task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/base_gray_al"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:textSize="14sp"
+                android:text="查看更多>"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/background_for_all"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

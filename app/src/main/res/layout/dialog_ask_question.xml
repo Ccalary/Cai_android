@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bc="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bc_white"
+    android:orientation="horizontal"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:gravity="center_vertical">
+
+    <com.bc.caibiao.view.ClearEditText
+        android:id="@+id/etQuest"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_weight="1"
+        android:hint="请输入问题"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_stroke_grey1"
+        android:textColor="@color/bc_black"
+        android:textSize="14sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+      />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="35dp"
+    android:text="提问"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:textColor="@color/bc_white"
+    android:textSize="14sp"
+    android:gravity="center"
+    android:layout_marginRight="20dp"
+    android:id="@+id/tvAsk"
+    android:background="@drawable/shape_solid_orange1"/>
+</LinearLayout>
